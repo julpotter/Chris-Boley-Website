@@ -7,16 +7,26 @@ h1 {
     padding: 140px;
 }
 
+header {
+    margin: auto;
+    font-family: "Times New Roman", serif;
+    tex-align: center;
+    padding: 50px;
+}
+
 .navbar {
     color: #FFF;
     text-align: center;
-    background: radial-gradient(#944, #FAA); 
+    background: radial-gradient(#944, #FAA);
+    background-position: center;
+    background-size: cover;
     padding: 10px;
-    width: 100%
+    width: auto;
 }
 
 
 .navbar a{
+    width: auto;
     text-align: center;
     font-size: 25px;
     padding: 10px;
@@ -41,9 +51,26 @@ h1 {
 
 img {
     display: block;
-    margin: auto;
-    width: 50%;
+    max-width: 100%;
+    height: auto;
 }
+
+.shasta-terrace {
+    margin: 30px auto;
+    display: flex;
+    max-width: 800px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.paragraph {
+    font-family: "Times New Roman";
+
+}
+
+
 
 
 
