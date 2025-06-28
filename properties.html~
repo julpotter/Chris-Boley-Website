@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+  <link href="main.css" rel="stylesheet"/>
+
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="mission.html">Mission</a>
+    <a href="properties.html">Properties</a>
+    <a href="">Contact</a>
+  </div>
+
+  <div class="shasta-terrace">
+    <img src="shasta1.jpeg">
+    <img src="shasta2.jpeg">
+    <img src="shasta3.jpeg">
+    <img src="shasta4.jpeg">
+  </div>
+  
+
+  </html>
+  
