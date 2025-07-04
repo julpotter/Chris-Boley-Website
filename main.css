@@ -44,15 +44,16 @@ p {
 .navbar a{
     font-size: 1.35rem;
     padding: 20px;
+    text-decoration: none;
 }
 
 @media (max-width: 600px) {
     .navbar {
 	flex-direction: column;
-	padding: 10px 0;
+	padding: 10px 20px;
     }
     .navbar a {
-	padding: 0;
+	padding: 15px 0;
 	font-size: 1.1rem;
 	width: 100%;
 	border-bottom: 1px solid rgba (255, 255, 255, 0.1);
