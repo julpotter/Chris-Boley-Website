@@ -1,35 +1,47 @@
-
+body {
+    background-color: #FFFFF3;
+    margin: 0;
+}
 h1 {
     font-family: "Times New Roman", serif;
     font-variant: normal;
     text-align: center;
-    color: #FFF;
+    color: #FFFFF3;
     padding: 140px;
 }
 
-header {
-    margin: auto;
+h2 {
     font-family: "Times New Roman", serif;
-    tex-align: center;
-    padding: 50px;
+    font-variant: normal;
+    text-align: center;
+    color: #030301;
+    font-size: 2rem;
 }
+
+p {
+    font-size: 2rem;
+}
+
 
 .navbar {
     color: #FFF;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     text-align: center;
-    background: radial-gradient(#944, #FAA);
+    background: #FF4365;
     background-position: center;
     background-size: cover;
     padding: 10px;
     width: auto;
+    margin-bottom: 30px;
 }
-
 
 .navbar a{
     width: auto;
     text-align: center;
     font-size: 25px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .navbar a:visited {
@@ -38,36 +50,94 @@ header {
 
 .navbar a:hover {
     color: yellow;
-
 }
 
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img10.jpeg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("csidevilla4.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    height: 300px;
+
+    /* Flex container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 img {
     display: block;
     max-width: 100%;
     height: auto;
+
 }
+
+
 
 .shasta-terrace {
     margin: 30px auto;
-    display: flex;
-    max-width: 800px;
-    flex-direction: column;
+    max-width: 100%;
+    
+    /*Grid container */
+    display: grid;
+    grid-template-areas:
+	"img img"
+	"img img";
     align-items: center;
     justify-content: center;
     gap: 20px;
 }
 
-.paragraph {
-    font-family: "Times New Roman";
+.shasta-terrace img {
+    width: 600px;
+    height: 400px;
+}
+    
 
+.summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    align-items: top;
+    margin: 0px auto;
+    margin-bottom: 80px;
+}
+
+.summary > p {
+    max-width: 100%;
+    min-width: 30%;
+    margin: 20px;
+}
+
+.portrait {
+    box-shadow: 10px 10px 5px;
+    
+}
+
+.paragraph {
+    font-family: "Times New Roman", Times, serif;
+
+}
+
+.checkout {
+    display: grid;
+    justify-items: center;
+    align-items: end;
+}
+
+.emphasis {
+    font-weight: bold;
+    font-style: italic;
+    color: #030301;
+}
+    
+
+.instagram-media {
+    margin: 10px auto !important;
+    display: block;
+    
 }
 
 
