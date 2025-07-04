@@ -7,7 +7,9 @@ h1 {
     font-variant: normal;
     text-align: center;
     color: #FFFFF3;
-    padding: 140px;
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    
 }
 
 h2 {
@@ -20,6 +22,7 @@ h2 {
 
 p {
     font-size: 2rem;
+    line-height: 1.6;
 }
 
 
@@ -30,18 +33,33 @@ p {
     z-index: 1000;
     text-align: center;
     background: #FF4365;
-    background-position: center;
-    background-size: cover;
-    padding: 10px;
+    padding: 10px 0;
     width: auto;
     margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .navbar a{
-    width: auto;
-    text-align: center;
-    font-size: 25px;
+    font-size: 1.35rem;
     padding: 20px;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+	flex-direction: column;
+	padding: 10px 0;
+    }
+    .navbar a {
+	padding: 10px;
+	font-size: 1.1rem;
+	width: 100%;
+	border-bottom: 1px solid rgba (255, 255, 255, 0.1);
+    }
+    .navbar a:last-child {
+	border-bottom: none; /* No separator on last link */
+    }
 }
 
 .navbar a:visited {
@@ -66,6 +84,24 @@ p {
     justify-content: center;
 }
 
+@media (max-width: 768px) {
+    .hero-image{
+	height: 300px;
+    }
+    h1 {
+	font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-image {
+	height: 200px;
+    }
+    h1 {
+	font-size: 1.8rem;
+    }
+}
+
 img {
     display: block;
     max-width: 100%;
@@ -77,21 +113,20 @@ img {
 
 .shasta-terrace {
     margin: 30px auto;
-    max-width: 100%;
-    
-    /*Grid container */
+    max-width: 1200px; /* Limit overall width for large screens */
     display: grid;
-    grid-template-areas:
-	"img img"
-	"img img";
-    align-items: center;
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid columns */
     gap: 20px;
+    justify-items: center; /* Center items within their grid cells */
+    align-items: start; /* Align items to the start of their cell */
+    padding: 0 20px; /* Add horizontal padding */
 }
 
 .shasta-terrace img {
-    width: 600px;
-    height: 400px;
+    width: 100%; /* Make images fill their grid cell */
+    height: 250px; /* Set a consistent height for gallery images */
+    object-fit: cover; /* Crop to fill, maintain aspect ratio */
+    border-radius: 8px; /* Slight rounded corners for images */
 }
     
 
@@ -103,18 +138,69 @@ img {
     align-items: top;
     margin: 0px auto;
     margin-bottom: 80px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .summary > p {
-    max-width: 100%;
-    min-width: 30%;
-    margin: 20px;
+    max-width: none;
+    min-width: unset;
+    margin: 0;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
 }
 
 .portrait {
-    box-shadow: 10px 10px 5px;
-    
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.3);
 }
+
+.portrait img {
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.3);
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+@media (max-width: 992px) {
+    .summary {
+	grid-template-columns: 1fr 1fr;
+    }
+    .summary > p {
+	font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .summary {
+	grid-template-columns: 1fr;
+	grid-template-areas:
+	"portrait-area"
+	    "p1-area"
+	    "p2-area";
+	gap: 30px;
+    }
+
+    .portrait {
+	grid-area: portrait-area;
+    }
+    .summary p:nth-of-type(1) { /* first paragraph */
+	grid-area: p1-area;
+    }
+    .summary p:nth-of-type(2) {
+	grid-area: p2-area;
+    }
+}
+
+@media (max-width: 480px) {
+    .summary > p {
+	font-size: 1rem;
+    }
+}
+	    
+	  
 
 .paragraph {
     font-family: "Times New Roman", Times, serif;
@@ -132,9 +218,21 @@ img {
     font-style: italic;
     color: #030301;
 }
+
+.instagram-embed {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
     
 
 .instagram-media {
+    width: 100% !important;
+    max-width: 540px;
+    min-width: 280px !important;
+    box-sizing: border-box;
     margin: 10px auto !important;
     display: block;
     
