@@ -42,6 +42,7 @@ p {
 }
 
 .navbar a{
+    color: #FFF;
     font-size: 1.35rem;
     padding: 20px;
     text-decoration: none;
@@ -54,6 +55,7 @@ p {
     }
     .navbar a {
 	padding: 15px 0;
+	color: #FFF;
 	font-size: 1.1rem;
 	width: 100%;
 	border-bottom: 1px solid rgba (255, 255, 255, 0.1);
