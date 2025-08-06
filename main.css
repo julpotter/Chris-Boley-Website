@@ -9,7 +9,7 @@ h1 {
     color: #FFFFF3;
     font-size: 3.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    
+
 }
 
 h2 {
@@ -23,6 +23,28 @@ h2 {
 p {
     font-size: 2rem;
     line-height: 1.6;
+}
+
+svg {
+  background-color: rgba(255, 0, 0, 0.0);
+  position: relative;
+  top: 500px;
+  z-index: 100;
+  animation-name: rotate-square;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+  animation-delay: unset;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate-square {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 
@@ -49,19 +71,19 @@ p {
 }
 
 @media (max-width: 600px) {
-    .navbar {
-	flex-direction: column;
-	padding: 10px 20px;
+  .navbar {
+    flex-direction: column;
+    padding: 10px 20px;
     }
     .navbar a {
-	padding: 15px 0;
-	color: #FFF;
-	font-size: 1.1rem;
-	width: 100%;
-	border-bottom: 1px solid rgba (255, 255, 255, 0.1);
+      padding: 15px 0;
+      color: #FFF;
+      font-size: 1.1rem;
+      width: 100%;
+      border-bottom: 1px solid rgba (255, 255, 255, 0.1);
     }
     .navbar a:last-child {
-	border-bottom: none; /* No separator on last link */
+      border-bottom: none; /* No separator on last link */
     }
 }
 
@@ -88,20 +110,20 @@ p {
 }
 
 @media (max-width: 768px) {
-    .hero-image{
-	height: 300px;
+  .hero-image{
+    height: 300px;
     }
-    h1 {
-	font-size: 2.5rem;
+  h1 {
+    font-size: 2.5rem;
     }
 }
 
 @media (max-width: 480px) {
-    .hero-image {
-	height: 200px;
+  .hero-image {
+    height: 200px;
     }
-    h1 {
-	font-size: 1.8rem;
+  h1 {
+    font-size: 1.8rem;
     }
 }
 
@@ -130,7 +152,7 @@ img {
     object-fit: cover; /* Crop to fill, maintain aspect ratio */
     border-radius: 8px; /* Slight rounded corners for images */
 }
-    
+
 
 .summary {
     display: grid;
@@ -159,7 +181,8 @@ img {
 }
 
 .portrait img {
-    box-shadow: 10px 10px 5px rgba(0,0,0,0.3);
+  box-shadow: 10px 10px 5px rgba(0,0,0,0.3);
+  position: relative;
     width: 100%;
     height: auto;
     display: block;
@@ -201,8 +224,8 @@ img {
 	font-size: 1rem;
     }
 }
-	    
-	  
+
+
 
 .paragraph {
     font-family: "Times New Roman", Times, serif;
@@ -236,7 +259,7 @@ img {
     margin-bottom: 50px;
     padding: 0 20px;
 }
-    
+
 
 .instagram-media {
     width: 100% !important;
@@ -245,12 +268,5 @@ img {
     box-sizing: border-box;
     margin: 10px auto !important;
     display: block;
-    
+
 }
-
-
-
-
-
-
-
