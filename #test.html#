@@ -1,0 +1,16 @@
+<a href="https://google.com">Link to Google</a>
+<img src="csidevilla2.jpeg" alt="Seaside Villa Pool">
+<p>This is a paragraph. It is two sentences long.</p>
+<p></p>
+<hr>
+<ol>
+  <li>List item 1</li>
+  <li>List item 1</li>
+</ol>
+<ul>
+  <li>List item 1</li>
+  
+  <li>Liste item 2</li>
+  
+<h1><h2><h3></h3></h2></h1>
+<!-- <p></p<strong>This is bold text<u></u></strong>> -->
