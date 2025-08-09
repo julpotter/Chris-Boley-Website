@@ -1,5 +1,6 @@
 body {
     background-color: #FFFFF3;
+    margin: 0;
 }
 h1 {
     font-family: "Times New Roman", serif;
@@ -310,7 +311,7 @@ svg {
     padding-left: 5.0rem;
     height: 150px;
     gap: 5.0rem;
-    animation: marquee-move-text 10s linear infinite;
+    animation: marquee-move-text 15s linear infinite;
     width: max-content;
 }
 
@@ -346,6 +347,8 @@ svg {
     box-shadow: 10px 10px 5px rgba(0,0,0,0.3);
     border-radius: 8px;
     margin: auto;
+    max-width: 80%;
+    min-width: 20%;
 }
 
 @media (max-width: 600px){
@@ -356,4 +359,15 @@ svg {
     }
 }
 
-	
+@media (max-width: 600px){
+    .fading {
+	animation: fading 10s infinite;
+    }
+
+    @keyframes fading{
+	0% { opacity: 0; }
+	50% { opacity: 1; }
+	100% { opacity: 0; }
+    }
+}
+    
